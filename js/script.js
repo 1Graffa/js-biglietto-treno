@@ -16,12 +16,12 @@ var prodotto = km * 0.21 ;
 var prezzo;
 
 if (age < 18){
-  prezzo = (prodotto * 20 / 100);
+  prezzo = (prodotto - (prodotto * 20 / 100));
 }
 else if (age > 65){
-  prezzo = (prodotto * 40 / 100);
+  prezzo = (prodotto - (prodotto * 40 / 100));
 }
 else {
   prezzo = prodotto;
 }
-document.getElementById('prezzo').innerHTML = prezzo + " $" ;
+document.getElementById('prezzo').innerHTML = Math.round(prezzo) + " $" ;
