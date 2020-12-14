@@ -13,11 +13,15 @@
 var km = prompt("Inserisci il numero di chilometri che dovrai percorrere");
 var age = prompt("Inserisci la tua età");
 var prodotto = km * 0.21 ;
+var prezzo;
 
 if (age < 18){
-  prodotto * 20 / 100;
+  prezzo = (prodotto * 20 / 100);
 }
-else (age > 65){
-  prodotto * 40 / 100;
+else if (age > 65){
+  prezzo = (prodotto * 40 / 100);
 }
-document.getElementById('prezzo').innerHTML = + " $" ;
+else {
+  prezzo = prodotto;
+}
+document.getElementById('prezzo').innerHTML = prezzo + " $" ;
