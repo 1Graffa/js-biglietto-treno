@@ -10,11 +10,22 @@
 // 20% per i minorenni
 // 40% per gli over 65
 
-var km = prompt("Inserisci il numero di chilometri che dovrai percorrere");
-var age = prompt("Inserisci la tua età");
+// 1)
+// definisco le variabili
+var km;
+var age;
+var prodotto;
+var prezzo;
+
+// 2)
+// Assegno un valore alle variabili
+var km = parseInt(prompt("Inserisci il numero di chilometri che dovrai percorrere"));
+var age = parseInt(prompt("Inserisci la tua età"));
 var prodotto = km * 0.21 ;
 var prezzo;
 
+//3)
+//calcolo scontistica in base all'età
 if (age < 18){
   prezzo = (prodotto - (prodotto * 20 / 100));
 }
@@ -24,4 +35,4 @@ else if (age > 65){
 else {
   prezzo = prodotto;
 }
-document.getElementById('prezzo').innerHTML = Math.round(prezzo) + " $" ;
+document.getElementById('prezzo').innerHTML += Math.round(prezzo) + "&#36;" ;
